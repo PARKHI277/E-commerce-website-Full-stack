@@ -1,6 +1,8 @@
 const app = require("./app");
 const dotenv = require("dotenv");
 const connectdatabase = require("./config/database");
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // handling uncaught exception
 process.on("uncaughtException", (err) => {
