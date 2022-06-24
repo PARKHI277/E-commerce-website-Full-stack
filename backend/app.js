@@ -12,9 +12,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // route imports
 const product = require("./routes/productRoute");
 const user = require("./routes/Userroute");
-
+const order = require("./routes/orderRoute");
 app.use("/api/users", product);
 app.use("/api/users", user);
+app.use("/api/users", order);
 // middleware
 app.use(errorMiddleware);
 
